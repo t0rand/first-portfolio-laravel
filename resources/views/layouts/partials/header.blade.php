@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-light bg-info">
-    @if (user_signed_in?)
-      @if (!current_user.is_admin)
+    @if (Auth::check){
+      @if (!current_user.is_admin){
         <div class='navbar-brand mr-auto'>
           <h1>カメラ📷批評</h1><h6>ver 1.2</h6>
         </div>
